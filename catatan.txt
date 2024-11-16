@@ -1,0 +1,26 @@
+Pertemuan 23 Oktober 2024
+
+- Mengedit file layout.tsx di dalam folder app
+- Penjelasan Tailwind css (basicnya utilitas)
+- Mengedit global css di dalam folder app
+
+Pertemuan 30 Oktober 2024
+
+- Penjelasan di Tailwind.com
+- flat disain
+- mengubah Width (Lebar nav) menambahkan flex dulu di dalam nav
+- justify-conten (Mengatur tampilan nav dari flex, kiri,kanan,tengah)
+- Menambahkan scrip di Tailwind.config.ts (custome)
+- gunakan {} untuk membuat turunan
+
+Pertemuan 11 November 2024
+
+- Mengedit tampilan tabel data mahasiswa
+- ctrl+shift+L (memblok banyak teks)
+- alt + panah atas&bawah (Memindahkan teks)
+- Menambahkan Section di file layout di area conten
+
+Pertemuan 13 November 2024
+
+- Mengedit tampilan icon 
+- Import FontAwesome
