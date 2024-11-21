@@ -24,3 +24,30 @@ Pertemuan 13 November 2024
 
 - Mengedit tampilan icon 
 - Import FontAwesome
+
+Pertemuan 18 November 2024
+
+- Membuat program edit data
+- menambahkan teknik :
+1. slug Link href={"/edit/"+data.npm}
+2. backlip {`/edit/${data.npm}`}
+
+- Enkripsi :
+1. base 64 end coding = {`/edit/${btoa(data.npm)}`}
+{`/edit/${btoa(data.npm)}/${atob("MjIzMTIxMTU=")}`}
+2. 
+
+- pemangilan dan membuat fungsi delate
+
+Pertemuan 20 November 2024
+
+- Belajar use client
+- Belajar useState dan useEffec
+ [] Array untuk data yang bertipe sama (String semuah)
+ {} Objek untuk data yang berbeda
+- untuk await fungction harus memiliki async
+        async function getData()
+        const mahasiswa = await prisma.tb_mahasiswa.findMany
+- Membuat folder baru di dalam app
+    models - mahasiswa.ts
+- Menambahkan export di mahasiswa.ts untuk dapat di ambil di tsx maupun di ts  
