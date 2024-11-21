@@ -1,20 +1,34 @@
+"use client"
+
 import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PrismaClient } from '@prisma/client'
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getData } from './models/mahasiswa';
 
-//buat variabel prisma
-const prisma = new PrismaClient();
-export default async function Rootpage() {
+
+//buat fungsi untuk dialog hapus
+function setDelete() {
+  alert("Hapus Data ?");
+}
+
+export default function Rootpage() {
+  // buat hook
+  // hook dengan "use State"
+  const [getValue, setValue] = useState({});
+
+  // Buat fungsi untuk memangil  "getData"
+  async function fatchData(){
+    setValue(await getData());
+  }
+  // hook dengan "use effect"
+  useEffect(() => {
+    // pangil fungsi "fatchData"
+    fatchData();
+
+  }, []);
 
   // buat variabel mahasiswa
-  const mahasiswa = await prisma.tb_mahasiswa.findMany({
-    where: {
-      status: "Y",
-    },
-  })
-
   // const mahasiswa = await prisma.tb_mahasiswa.findUnique({
   //   where: {
   //     id: 17,
@@ -35,7 +49,7 @@ export default async function Rootpage() {
         </thead>
         <tbody>
 
-          {mahasiswa.map((data: any, index: number) => (
+          {Object.values(getValue).map((data: any, index: number) => (
             // <div key={index}>
             //   <div>
             //     {data.npm} - {data.nama} - {data.prodi}
@@ -45,12 +59,12 @@ export default async function Rootpage() {
             <tr>
               <td className="border border-black p-2.5 text-center">
                 {/* icon edit */}
-                <Link href={"/"} className="bg-green-700 hover:bg-green-800 text-white py-2 px-2.5 rounded-full mr-1 text-sm" title="Ubah Data">
+                <Link href={`/edit/${btoa(data.npm)}`} className="bg-green-700 hover:bg-green-800 text-white py-2 px-2.5 rounded-full mr-1 text-sm" title="Ubah Data">
                   <FontAwesomeIcon icon={faPencil}></FontAwesomeIcon>
                 </Link>
 
                 {/* icon delete */}
-                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data">
+                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data" onClick={setDelete}>
                   <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                 </Link>
 
