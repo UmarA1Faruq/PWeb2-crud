@@ -3,12 +3,12 @@
 ### Cara mengambil & menjalankan projek
 Buka terminal lalu arahkan ke lokasi yang diinginkan, kemudian jalankan perintah berikut:
 ```bash
-git clone https://github.com/afrandormd/Pemrograman-web-2.git
+https://github.com/UmarA1Faruq/PWeb2-crud.git
 ```
 
 Setelah clone repositori ini masuk ke dalam projek tersebut dengan cara:
 ```bash
-cd Pemrograman-web-2
+cd PWeb2-crud
 ```
 
 Lalu jalankan perintah berikut ini untuk menginstall `dependencys` atau modules yang dibutuhkan jika menggunakan `npm`
