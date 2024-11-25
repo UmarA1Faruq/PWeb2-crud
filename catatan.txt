@@ -56,5 +56,6 @@ Pertemuan 25 November 2024
 
 - Memperbaiki codingan kemarin
 - Membuat Parameter di tampilan delete untuk menampilkan nama atau data yang ingin di hapus
-- Parameter formal (Parameter yang digunakan bersamaan dengan fungction)
-- Parameter Aktual (Parameter yang digunakan untuk memangil Parameter fungction)
+- Parameter formal (Parameter yang dibuat bersamaan dengan fungction)
+- Parameter Aktual (Parameter yang digunakan saat memangil Parameter fungction)
+- urutan Parameter formal dan Aktual harus sesuai
