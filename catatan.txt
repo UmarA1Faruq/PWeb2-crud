@@ -51,3 +51,7 @@ Pertemuan 20 November 2024
 - Membuat folder baru di dalam app
     models - mahasiswa.ts
 - Menambahkan export di mahasiswa.ts untuk dapat di ambil di tsx maupun di ts  
+
+Pertemuan 25 November 2024
+
+- Memperbaiki codingan kemarin
