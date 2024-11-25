@@ -1,7 +1,9 @@
+"use server";
+
 import { PrismaClient } from "@prisma/client";
 
 //buat variabel prisma
-const prisma = new PrismaClient;
+const prisma = new PrismaClient();
 
 // Buat fungsi untuk mengambil data mahasiswa
 export async function getData() {
