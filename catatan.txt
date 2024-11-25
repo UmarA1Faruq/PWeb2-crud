@@ -60,5 +60,6 @@ Pertemuan 25 November 2024
 - Parameter Aktual (Parameter yang digunakan saat memangil Parameter fungction)
 - urutan Parameter formal dan Aktual harus sesuai
 (Fokus menyelesaikan fungsi Delete)
-(Arow function)
+(Arrow function)
+- mengedit di mahasiswa.ts (menambahkan arrow function)
 
