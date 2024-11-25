@@ -1,15 +1,23 @@
-"use client"
+"use client";
 
 import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { getData } from './models/mahasiswa';
 
 
 //buat fungsi untuk dialog hapus
-function setDelete() {
-  alert("Hapus Data ?");
+function setDelete(npm : string) {
+ //alert("Hapus Data ?");
+ if(confirm(`Data Mahasiswa : ${npm} Ingin Dihapus ?`) == true)
+ {
+  alert("Ok");
+ }
+//  else
+//  {
+//   alert("Cancel");
+//  }
 }
 
 export default function Rootpage() {
@@ -41,7 +49,7 @@ export default function Rootpage() {
       <table className="w-full">
         <thead>
           <tr className="bg-slate-300 h-12">
-            <th className="w-10% border-2 border-black">Aksi</th>
+            <th className="w-10% border border-black">Aksi</th>
             <th className="w-10% border border-black">NPM</th>
             <th className="w-1/2 border border-black">Nama</th>
             <th className="w-30% border border-black">Prodi</th>
@@ -56,7 +64,7 @@ export default function Rootpage() {
             //   </div>
             // </div>
 
-            <tr>
+            <tr key={index}>
               <td className="border border-black p-2.5 text-center">
                 {/* icon edit */}
                 <Link href={`/edit/${btoa(data.npm)}`} className="bg-green-700 hover:bg-green-800 text-white py-2 px-2.5 rounded-full mr-1 text-sm" title="Ubah Data">
@@ -64,7 +72,7 @@ export default function Rootpage() {
                 </Link>
 
                 {/* icon delete */}
-                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data" onClick={setDelete}>
+                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data" onClick={() => {setDelete(data.nama)}}>
                   <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                 </Link>
 
