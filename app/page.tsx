@@ -8,9 +8,9 @@ import { getData } from './models/mahasiswa';
 
 
 //buat fungsi untuk dialog hapus
-function setDelete(npm : string) {
+function setDelete(npm : string, nama : string) {
  //alert("Hapus Data ?");
- if(confirm(`Data Mahasiswa : ${npm} Ingin Dihapus ?`) == true)
+ if(confirm(`Data Mahasiswa : ${npm} - ${nama} Ingin Dihapus ?`) == true)
  {
   alert("Ok");
  }
@@ -72,7 +72,7 @@ export default function Rootpage() {
                 </Link>
 
                 {/* icon delete */}
-                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data" onClick={() => {setDelete(data.nama)}}>
+                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data" onClick={() => {setDelete(data.npm, data.nama)}}>
                   <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                 </Link>
 
