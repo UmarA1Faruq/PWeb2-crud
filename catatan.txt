@@ -55,3 +55,4 @@ Pertemuan 20 November 2024
 Pertemuan 25 November 2024
 
 - Memperbaiki codingan kemarin
+- Membuat Parameter di tampilan delete
