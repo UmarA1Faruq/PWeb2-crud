@@ -4,15 +4,16 @@ import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { getData } from './models/mahasiswa';
+import { getData, setUpdateStatus } from './models/mahasiswa';
 
 
 //buat fungsi untuk dialog hapus
-function setDelete(npm : string, nama : string) {
+async function setDelete(npm : string, nama : string) {
  //alert("Hapus Data ?");
  if(confirm(`Data Mahasiswa : ${npm} - ${nama} Ingin Dihapus ?`) == true)
  {
-  alert("Ok");
+  //alert("Ok");
+  await setUpdateStatus();
  }
 //  else
 //  {
