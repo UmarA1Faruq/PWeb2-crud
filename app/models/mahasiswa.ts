@@ -19,3 +19,12 @@ export async function getData() {
   
     return mahasiswa;
   }
+
+  // buat fungsi hapus date (update status Y >> T)
+  // arrow function
+
+  // function setDelete()
+  export const setUpdateStatus = async() =>
+  {
+
+  }
