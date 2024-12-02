@@ -66,4 +66,5 @@ Pertemuan 25 November 2024
 Pertemuan 2 December 2024
 
 - mengedit agar delete mahasiswa maka data akan pindah ke log data mahasiswa di mahasiswa.ts
-- Return digunakan jika kita menginginkan fadeback jika tidak dinamakan prosedur
+// Return digunakan jika kita menginginkan fadeback jika tidak dinamakan prosedur
+- Mengedit status mahasiswa dari Y menjadi N
