@@ -13,7 +13,10 @@ async function setDelete(npm : string, nama : string) {
  if(confirm(`Data Mahasiswa : ${npm} - ${nama} Ingin Dihapus ?`) == true)
  {
   //alert("Ok");
-  await setUpdateStatus();
+  await setUpdateStatus(npm);
+  alert(`Data Mahasiswa : ${npm} - ${nama} Berhasil Dihapus`)
+  //Relode otomatis
+  location.reload();
  }
 //  else
 //  {
