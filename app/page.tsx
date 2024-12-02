@@ -1,6 +1,6 @@
 "use client";
 
-import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPencil, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -8,20 +8,19 @@ import { getData, setUpdateStatus } from './models/mahasiswa';
 
 
 //buat fungsi untuk dialog hapus
-async function setDelete(npm : string, nama : string) {
- //alert("Hapus Data ?");
- if(confirm(`Data Mahasiswa : ${npm} - ${nama} Ingin Dihapus ?`) == true)
- {
-  //alert("Ok");
-  await setUpdateStatus(npm);
-  alert(`Data Mahasiswa : ${npm} - ${nama} Berhasil Dihapus`)
-  //Relode otomatis
-  location.reload();
- }
-//  else
-//  {
-//   alert("Cancel");
-//  }
+async function setDelete(npm: string, nama: string) {
+  //alert("Hapus Data ?");
+  if (confirm(`Data Mahasiswa : ${npm} - ${nama} Ingin Dihapus ?`) == true) {
+    //alert("Ok");
+    await setUpdateStatus(npm);
+    alert(`Data Mahasiswa : ${npm} - ${nama} Berhasil Dihapus`)
+    //Relode otomatis
+    location.reload();
+  }
+  //  else
+  //  {
+  //   alert("Cancel");
+  //  }
 }
 
 export default function Rootpage() {
@@ -30,7 +29,7 @@ export default function Rootpage() {
   const [getValue, setValue] = useState({});
 
   // Buat fungsi untuk memangil  "getData"
-  async function fatchData(){
+  async function fatchData() {
     setValue(await getData());
   }
   // hook dengan "use effect"
@@ -50,6 +49,12 @@ export default function Rootpage() {
   return (
     <>
       <title>View Data Mahasiswa</title>
+      <nav className="mb-2 flex justify-end">
+        <button className="btn btn-outline">
+          <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+          Tambah Data Mahasiswa
+        </button>
+      </nav>
       {/* tampilkan data mahasiswa */}
       <table className="w-full">
         <thead>
@@ -77,7 +82,7 @@ export default function Rootpage() {
                 </Link>
 
                 {/* icon delete */}
-                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data" onClick={() => {setDelete(data.npm, data.nama)}}>
+                <Link href={"/"} className="bg-red-500 hover:bg-red-600 text-white py-2 px-2.5 rounded-full ml-1 text-sm" title="Hapus Data" onClick={() => { setDelete(data.npm, data.nama) }}>
                   <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                 </Link>
 
