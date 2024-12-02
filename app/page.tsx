@@ -49,6 +49,7 @@ export default function Rootpage() {
 
   return (
     <>
+      <title>View Data Mahasiswa</title>
       {/* tampilkan data mahasiswa */}
       <table className="w-full">
         <thead>
