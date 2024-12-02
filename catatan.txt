@@ -63,3 +63,7 @@ Pertemuan 25 November 2024
 (Arrow function)
 - mengedit di mahasiswa.ts (menambahkan arrow function)
 
+Pertemuan 2 December 2024
+
+- mengedit agar delete mahasiswa maka data akan pindah ke log data mahasiswa di mahasiswa.ts
+- Return digunakan jika kita menginginkan fadeback jika tidak dinamakan prosedur
