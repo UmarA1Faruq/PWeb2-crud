@@ -24,7 +24,14 @@ export async function getData() {
   // arrow function
 
   // function setDelete()
-  export const setUpdateStatus = async() =>
+  export const setUpdateStatus = async(npm: string) =>
   {
-
+    await prisma.tb_mahasiswa.updateMany({
+      where: {
+        npm: npm,
+      },
+      data: {
+        status: 'N',
+      },
+    });
   }
