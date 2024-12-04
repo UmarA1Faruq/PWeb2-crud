@@ -76,3 +76,6 @@ Pertemuan 4 December 2024
 - Mengatur Tema untuk Daisyui, ambil dari web Daisyui.io 
 - Membuat folder add dan file page.tsx 
 - Code untuk tampilan Page didalam folder add
+// Belajar Metode Grid
+- Belajar col-span-(nilai sesuai dengan colom) row-span-(nilai sesuai baris)
+- Belajar col-star-(nilai)
