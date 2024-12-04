@@ -70,3 +70,8 @@ Pertemuan 2 December 2024
 - Mengedit status mahasiswa dari Y menjadi N
 - Mengubah favicon.ico
 - Instalasi dan konfigurasi Daisyui
+
+Pertemuan 4 December 2024
+
+- Mengatur Tema untuk Daisyui, ambil dari web Daisyui.io 
+- 
