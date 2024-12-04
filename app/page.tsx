@@ -50,10 +50,10 @@ export default function Rootpage() {
     <>
       <title>View Data Mahasiswa</title>
       <nav className="mb-2 flex justify-end">
-        <button className="btn btn-outline">
+        <Link href={"/add"} className="btn btn-outline">
           <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
           Tambah Data Mahasiswa
-        </button>
+        </Link>
       </nav>
       {/* tampilkan data mahasiswa */}
       <table className="w-full">
