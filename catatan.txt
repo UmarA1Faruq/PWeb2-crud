@@ -74,4 +74,5 @@ Pertemuan 2 December 2024
 Pertemuan 4 December 2024
 
 - Mengatur Tema untuk Daisyui, ambil dari web Daisyui.io 
-- 
+- Membuat folder add dan file page.tsx 
+- Code untuk tampilan Page didalam folder add
