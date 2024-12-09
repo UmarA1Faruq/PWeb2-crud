@@ -84,5 +84,6 @@ Pertemuan 9 December 2024
 
 - Mengubah pilihan prodi mahasiswa, menambahkan value
 - Membuat hook untuk NPM
-- GetValue(Untuk membaca data) dan SetValue() 
+- GetValue(Untuk membaca data) dan SetValue(untuk menyimpan data baru) 
 - Menambahkan onChange={(e) => {e.target.value}} e(event) untuk melihat data
+- Membuat fungsi if else
