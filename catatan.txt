@@ -79,3 +79,10 @@ Pertemuan 4 December 2024
 // Belajar Metode Grid
 - Belajar col-span-(nilai sesuai dengan colom) row-span-(nilai sesuai baris)
 - Belajar col-star-(nilai)
+
+Pertemuan 9 December 2024
+
+- Mengubah pilihan prodi mahasiswa, menambahkan value
+- Membuat hook untuk NPM
+- GetValue(Untuk membaca data) dan SetValue() 
+- Menambahkan onChange={(e) => {e.target.value}} e(event) untuk melihat data

@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function AddPage() {
+    // Buat hook (use state)
+    const [getNPM, setNPM] = useState("");
+
     return (
         <>
             <title>Tambah Data Mahasiswa</title>
@@ -9,22 +12,26 @@ export default function AddPage() {
                 <div className='col-span-4'>
                     <input
                         type="text"
-                        placeholder="Type here"
-                        className="input input-bordered input-primary w-full max-w-xs" />
+                        placeholder="Isi NPM"
+                        className="input input-bordered input-primary w-full" 
+                        onChange={(e) => {e.target.value}}
+                    />
                 </div>
                 <div className='col-start-1'>Nama</div>
                 <div className='col-span-4'>
                     <input
                         type="text"
-                        placeholder="Type here"
-                        className="input input-bordered input-primary w-full max-w-xs" />
+                        placeholder="Isi Nama Mahasiswa"
+                        className="input input-bordered input-primary w-full " />
                 </div>
                 <div className='col-start-1'>Prodi</div>
                 <div className='col-span-4'>
-                    <select className="select select-primary w-full max-w-xs">
-                        <option disabled selected>Pilih Prodi Anda</option>
-                        <option>Informatika</option>
-                        <option>Sistem Informasi</option>
+                    <select defaultValue={""} className="select select-primary w-full">
+                        <option value={""} disabled >Pilih Prodi Anda</option>
+                        <option value={"Informatika"}>Informatika</option>
+                        <option value={"Sistem Informasi"}>Sistem Informasi</option>
+                        <option value={"Teknologi Informasi"}>Teknologi Informasi</option>
+                        <option value={"Teknik Komputer"}>Teknik Komputer</option>
                         
                     </select>
                 </div>
