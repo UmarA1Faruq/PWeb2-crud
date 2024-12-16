@@ -10,14 +10,19 @@ export default function AddPage() {
 
     // buat fungsi simpan data
     const setSaveData = () => {
-        if (getNPM == "" ||
-            getNama == "" ||
-            getProdi == ""
-        ){
-            alert("Lengkapi Seluruh Data !");
-        } else{
-            alert("OK");
-        }
+        // if (getNPM == "" ||
+        //     getNama == "" ||
+        //     getProdi == ""
+        // ){
+        //     alert("Lengkapi Seluruh Data !");
+        // } else{
+        //     alert("OK");
+        // }
+
+        // Ternary operator
+        (getNPM == "" || getNama == "" || getProdi == "")
+        ? alert("Lengkapi Seluruh Data !")
+        : alert("OK")
     };
     
 

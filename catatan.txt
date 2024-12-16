@@ -87,3 +87,8 @@ Pertemuan 9 December 2024
 - GetValue(Untuk membaca data) dan SetValue(untuk menyimpan data baru) 
 - Menambahkan onChange={(e) => {e.target.value}} e(event) untuk melihat data
 - Membuat fungsi if else
+
+Pertemuan 16 December 2024
+
+- Belajar atau menmbahkan Ternary operator ()
+- 
