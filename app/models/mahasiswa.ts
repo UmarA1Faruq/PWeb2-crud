@@ -35,3 +35,15 @@ export async function getData() {
       },
     });
   }
+
+  // Buat fungsi check Data mahasiswa (Npm)
+  export const checkData = async(npm: string) => {
+    // buat variabel "check"
+    const check = await prisma.tb_mahasiswa.findMany({
+      where: {
+        npm: npm,   
+      },
+    });
+  
+    return check;
+  }
