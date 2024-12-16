@@ -1,12 +1,22 @@
 "use client"
 
 import React, { useState } from 'react'
+import { checkData } from '../models/mahasiswa';
 
 export default function AddPage() {
     // Buat hook (use state)
     const [getNPM, setNPM] = useState("");
     const [getNama, setNama] = useState("");
     const [getProdi, setProdi] = useState("");
+
+    // Buat hook (use state)
+    // untuk respon hasil fungsi "checkData"
+    const [getValue, setValue] = useState({});
+
+    // buat fungsi untuk respon checkData
+    const checkNPM = async(npm: string) => {
+        setValue(await checkData(npm))
+    }
 
     // buat fungsi simpan data
     const setSaveData = () => {
@@ -22,7 +32,10 @@ export default function AddPage() {
         // Ternary operator
         (getNPM == "" || getNama == "" || getProdi == "")
         ? alert("Lengkapi Seluruh Data !")
-        : alert("OK")
+        : [(Object.values(getValue).length == 0)
+            ? alert("Simpan")
+            : alert("Gagal Simpan !")
+        ]
     };
     
 
@@ -36,7 +49,10 @@ export default function AddPage() {
                         type="text"
                         placeholder="Isi NPM"
                         className="input input-bordered input-primary w-full" 
-                        onChange={(e) => {setNPM(e.target.value)}}
+                        onChange={(e) => {
+                            setNPM(e.target.value)
+                            checkNPM(e.target.value)
+                        }}
                     />
                 </div>
                 <div className='col-start-1'>Nama</div>

@@ -91,7 +91,15 @@ Pertemuan 9 December 2024
 Pertemuan 16 December 2024
 
 - Belajar atau menmbahkan Ternary operator (sebagai penganti if)
-If Else " ? = IF ", " : = Else "
-(kondisi) ? (jika benar) : (jika salah)
+* If Else " ? = IF ", " : = Else "
+* (kondisi) ? (jika benar) : (jika salah)
+* If bersarang :
+(getNPM == "" || getNama == "" || getProdi == "")
+        ? alert("Lengkapi Seluruh Data !")
+        : [(Object.values(getValue).length == 0)
+            ? alert("Simpan")
+            : alert("Gagal Simpan !")
+        ]
 - gunakan aray " : [alert("oke"), alret("Yes")] " untuk menambahkan lebih dari satu
-
+- Menambahkan fungsi check data mahasiswa
+- Membuat fungsi untuk respon check data mahasiswa
