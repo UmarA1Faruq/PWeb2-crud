@@ -107,4 +107,4 @@ Pertemuan 16 December 2024
 Pertemuan 18 December 2024
 
 - Menambahkan fugsi simpan data di mahasiswa.ts dan page.tsx di folder add
-- 
+- Menambhakan folder edit -> [npm] -> page.tsx
