@@ -103,3 +103,8 @@ Pertemuan 16 December 2024
 - gunakan aray " : [alert("oke"), alret("Yes")] " untuk menambahkan lebih dari satu
 - Menambahkan fungsi check data mahasiswa
 - Membuat fungsi untuk respon check data mahasiswa
+
+Pertemuan 18 December 2024
+
+- Menambahkan fugsi simpan data di mahasiswa.ts dan page.tsx di folder add
+- 

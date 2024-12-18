@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import { checkData } from '../models/mahasiswa';
+import { checkData, saveData } from '../models/mahasiswa';
 
 export default function AddPage() {
     // Buat hook (use state)
@@ -19,7 +19,7 @@ export default function AddPage() {
     }
 
     // buat fungsi simpan data
-    const setSaveData = () => {
+    const setSaveData = async () => {
         // if (getNPM == "" ||
         //     getNama == "" ||
         //     getProdi == ""
@@ -32,10 +32,12 @@ export default function AddPage() {
         // Ternary operator
         (getNPM == "" || getNama == "" || getProdi == "")
         ? alert("Lengkapi Seluruh Data !")
-        : [(Object.values(getValue).length == 0)
-            ? alert("Simpan")
-            : alert("Gagal Simpan !")
+        : (Object.values(getValue).length == 0)
+        ? [await saveData(getNPM, getNama, getProdi),
+            alert("Berhasil simpan"),
+            location.reload()
         ]
+        : alert ("NPM Sudah ada")
     };
     
 
