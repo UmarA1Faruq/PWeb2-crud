@@ -113,3 +113,8 @@ Pertemuan 30 December 2024
 
 - Penjelasan teksnis dalam mengupload tugas project di Git 
 - Belajar Git
+- Buat folder dokumentasi, kemudian file untuk perorang
+- didalam file berisi dokumentasi dari hasil perkerjaan 
+- Buat di word berisi SS dan deskripsi yang dikerjakan pada waktu itu, buat menjadi file PDF
+- buat projek di folder dan repo menjadi nama kelompok
+- format commit : " umar: perubahan "
